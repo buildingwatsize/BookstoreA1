@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="BookStoreXSLT.xsl"?>
-<bookstore>
+<bookstore category="new">
 	<book category="computers-technology">
-		<title lang="en">Lua 5.2 Reference Manual</title>
+		<title lang="en">TEST</title>
 		<author> Roberto Ierusalimschy, Luiz Henrique de Figueiredo, Waldemar Celes </author>
 		<publisher> Samurai Media Limited </publisher>
 		<publish_date> 04-11-2015</publish_date>
@@ -557,4 +557,5 @@
 		<language>English</language>
 		<price>$46.47</price>
 	</book>
-</bookstore>
+
+<book><title lang="en">dzf</title lang="en"><author/><publisher/><publish_date>dzf</publish_date><type/><language/><price>z</price></book></bookstore>
