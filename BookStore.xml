@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="BookStoreXSLT.xsl"?>
-<bookstore category="new">
+<bookstore>
 	<book category="computers-technology">
-		<title lang="en">TEST</title>
+		<title lang="en">Lua 5.2 Reference Manual</title>
 		<author> Roberto Ierusalimschy, Luiz Henrique de Figueiredo, Waldemar Celes </author>
 		<publisher> Samurai Media Limited </publisher>
 		<publish_date> 04-11-2015</publish_date>
@@ -472,7 +472,7 @@
 		<author>Dan Wahlin,Matt Gibbs	</author>  
 		<publisher>Wiley Publishing, Inc.</publisher>
 		<publish_date>01-01-2007</publish_date>
-    <type>bond paper</type>
+    	<type>bond paper</type>
 		<language>English</language>
 		<price>$39.48</price>
 	</book>
@@ -481,7 +481,7 @@
 		<author>Lynn Beighley</author>  
 		<publisher>O'Reilly Media, Inc.</publisher>
 		<publish_date>01-02-2007</publish_date>
-    <type>bond paper</type>
+    	<type>bond paper</type>
 		<language>English</language>
 		<price>$55.52</price>
 	</book>
@@ -490,7 +490,7 @@
 		<author>Barry I.Soroka</author>  
 		<publisher>Jones and Bartlett Publishers, LLC.</publisher>
 		<publish_date>01-01-2006	</publish_date>
-    <type>bond paper</type>
+    	<type>bond paper</type>
 		<language>English</language>
 		<price>$30.02</price>
 	</book>
@@ -499,7 +499,7 @@
 		<author>H.M. Deitel,P.J. Deitel,T.R. Nieto</author>  
 		<publisher>Prentice Hall Ptr</publisher>
 		<publish_date>10-06-2003</publish_date>	
-    <type>bond paper</type>
+    	<type>bond paper</type>
 		<language>English</language>
 		<price>$23.30</price>
 	</book>
@@ -508,7 +508,7 @@
 		<author>Lewin A.R.W. Edwards</author>  
 		<publisher>E.Q. Plus, สนพ.</publisher>
 		<publish_date>15-11-2005</publish_date>
-    <type>bond paper</type>
+    	<type>bond paper</type>
 		<language>English</language>
 		<price>$47.57</price>
 	</book>
@@ -517,7 +517,7 @@
 		<author>Jon Duckett</author>  
 		<publisher>Wiley Publishing, Inc.</publisher>
 		<publish_date>18-12-2010</publish_date>
-    <type>bond paper</type>
+    	<type>bond paper</type>
 		<language>English</language>
 		<price>$28.65</price>
 	</book>
@@ -526,7 +526,7 @@
 		<author>Jonathan Chaffer</author>  
 		<publisher>Packt Publishing</publisher>
 		<publish_date>25-11-2011</publish_date>
-    <type>bond paper</type>
+    	<type>bond paper</type>
 		<language>English</language>
 		<price>$64.16</price>
 	</book>
@@ -535,7 +535,7 @@
 		<author>William Stallings</author>  
 		<publisher>Pearson Education Limited</publisher>
 		<publish_date>14-07-2013</publish_date>
-    <type>art paper</type>
+    	<type>art paper</type>
 		<language>English</language>
 		<price>$29.88</price>
 	</book>
@@ -544,7 +544,7 @@
 		<author>Irv Englander</author>  
 		<publisher>John Wiley and Sons (Asia) Pte Ltd</publisher>
 		<publish_date>22-03-2010</publish_date>
-    <type>bond paper</type>
+    	<type>bond paper</type>
 		<language>English</language>
 		<price>$27.97</price>
 	</book>
@@ -553,9 +553,8 @@
 		<author>Robert Kolker</author>  
 		<publisher>Wiley-Blackwell</publisher>
 		<publish_date>30-10-2010</publish_date>
-    <type>bond paper</type>
+    	<type>bond paper</type>
 		<language>English</language>
 		<price>$46.47</price>
 	</book>
-
-<book><title lang="en">dzf</title lang="en"><author/><publisher/><publish_date>dzf</publish_date><type/><language/><price>z</price></book></bookstore>
+<book category="new"><title lang="en">t</title><author>t</author><publisher>t</publisher><publish_date>t</publish_date><type>t</type><language>t</language><price>t</price></book></bookstore>

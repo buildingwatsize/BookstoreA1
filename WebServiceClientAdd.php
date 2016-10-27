@@ -10,11 +10,11 @@
 	require("lib/nusoap.php");
 ?>
 
-<!-- EDIT SERVICE -->
+<!-- ADD SERVICE -->
 <h1> Add Book By Name Service </h1>
 <?php
-  	if($_POST['submit_edit'] == "Submit") {
-        $client = new nusoap_client("http://localhost/edit/WebServiceServer.php?wsdl",true); 
+  	if($_POST['submit_add'] == "Submit") {
+        $client = new nusoap_client("http://localhost/book/WebServiceServer.php?wsdl",true); 
 		$add = array(
 			'titleVar'=>$_POST['from_title'],
 			'authorVar'=>$_POST['from_author'],
@@ -24,31 +24,30 @@
 			'languageVar'=>$_POST['from_language'],
 			'priceVar'=>$_POST['from_price']
 			);
-        $data = $client->call("AddXML",$add);
-		
+        $data = $client->call("AddXML",$add);		
         echo $data;
-
     }
 ?>
 <form method="POST">
-	<p>title       :<INPUT type="text" name="from_title" size="50" maxlength="100">
-	<br>
-	author      :<INPUT type="text" name="from_author" size="50" maxlength="100">
-	<br>
-	publisher   :<INPUT type="text" name="from_publisher" size="50" maxlength="100">
-	<br>
-	publish_date:<INPUT type="text" name="from_publish_date" size="50" maxlength="100">
-	<br>
-	type        :<INPUT type="text" name="from_type" size="50" maxlength="100">
-	<br>
-	language    :<INPUT type="text" name="from_language" size="50" maxlength="100">
-	<br>
-	price       :<INPUT type="text" name="from_price" size="50" maxlength="100"></p>
-	<br>
-	<INPUT type="submit" name="submit_edit" value="Submit">
-	<br>
+	<p>
+	title:
+	<INPUT type="text" name="from_title" size="50" maxlength="100"><br>
+	author:
+	<INPUT type="text" name="from_author" size="50" maxlength="100"><br>
+	publisher:
+	<INPUT type="text" name="from_publisher" size="50" maxlength="100"><br>
+	publish_date:
+	<INPUT type="text" name="from_publish_date" size="50" maxlength="100"><br>
+	type:
+	<INPUT type="text" name="from_type" size="50" maxlength="100"><br>
+	language:
+	<INPUT type="text" name="from_language" size="50" maxlength="100"><br>
+	price:
+	<INPUT type="text" name="from_price" size="50" maxlength="100"><br>
+	</p>
+	<INPUT type="submit" name="submit_add" value="Submit">
 </form>
-<!-- EDIT SERVICE -->
+<!-- ADD SERVICE -->
 
 </body>
 </html>
