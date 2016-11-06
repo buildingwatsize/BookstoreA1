@@ -4,7 +4,7 @@
 <xsl:template match="/">
   <html>
   <body>
-  <h2>This is Bookstore XML</h2>
+    <h1> BookStore List </h1>
     <table border="4">
       <tr bgcolor="#9acd32">
         <th style="text-align:left">Title</th>

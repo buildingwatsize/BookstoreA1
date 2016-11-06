@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="BookStoreXSLT.xsl"?>
-<bookstore>
+<bookstore category="new">
 	<book category="computers-technology">
 		<title lang="en">Lua 5.2 Reference Manual</title>
 		<author> Roberto Ierusalimschy, Luiz Henrique de Figueiredo, Waldemar Celes </author>
@@ -50,7 +50,7 @@
 		<price> $2.86 </price>
 	</book>
 	<book category="fiction">
-		<title lang="en"> Take Me With You</title>
+		<title lang="en">Take Me With You</title>
 		<author> Catherine Ryan Hyde </author>
 		<publisher> Lake Union Publishing </publisher>
 		<publish_date> 22-07-2014 </publish_date>
@@ -557,4 +557,6 @@
 		<language>English</language>
 		<price>$46.47</price>
 	</book>
-<book category="new"><title lang="en">t</title><author>t</author><publisher>t</publisher><publish_date>t</publish_date><type>t</type><language>t</language><price>t</price></book></bookstore>
+	
+	
+</bookstore>

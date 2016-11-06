@@ -1,8 +1,8 @@
-<html> 
-	<head>
+<html>
+	<head> 
 	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-		<title>Add New Book</title> 
+		<title>Edit Book</title> 
 
 		<!-- DO NOT TOUCH THIS SCRIPT -->		
 		<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -38,49 +38,36 @@
 		</div>
 	
 		<div class="content">
-			<!-- ADD SERVICE -->
-			<h1> Add New Book </h1>
+			<!-- EDIT SERVICE -->
+			<h1> Edit Book </h1>
 			<?php
 				// FOR DISABLE ERROR INPUT NOTICE
 				error_reporting( error_reporting() & ~E_NOTICE );
 				// FOR CALL NUSOAP
 				require("lib/nusoap.php");
 
-			  	if($_POST['submit_add'] == "Submit") {
+			  	if($_POST['submit_edit'] == "Submit") {
+					$from_name=$_POST['from_name'];
+					$to_name=$_POST['to_name'];
 			        $client = new nusoap_client("http://ec2-54-169-255-210.ap-southeast-1.compute.amazonaws.com/book/server_wsdl.php?wsdl",true);
-			        $add = array(
-						'titleVar'=>$_POST['from_title'],
-						'authorVar'=>$_POST['from_author'],
-						'publisherVar'=>$_POST['from_publisher'],
-						'publish_dateVar'=>$_POST['from_publish_date'],
-						'typeVar'=>$_POST['from_type'],
-						'languageVar'=>$_POST['from_language'],
-						'priceVar'=>$_POST['from_price']
+			        $params = array(
+						'from_name'=>$from_name,
+						'to_name'=>$to_name
 						);
-			        $data = $client->call("add_book",$add);		
+			        $data = $client->call("edit_book",$params); 
 			        echo $data;
 			    }
 			?>
 			<form method="POST">
 				<p>
-				title:
-				<INPUT type="text" name="from_title" size="50" maxlength="100"><br>
-				author:
-				<INPUT type="text" name="from_author" size="50" maxlength="100"><br>
-				publisher:
-				<INPUT type="text" name="from_publisher" size="50" maxlength="100"><br>
-				publish_date:
-				<INPUT type="text" name="from_publish_date" size="50" maxlength="100"><br>
-				type:
-				<INPUT type="text" name="from_type" size="50" maxlength="100"><br>
-				language:
-				<INPUT type="text" name="from_language" size="50" maxlength="100"><br>
-				price:
-				<INPUT type="text" name="from_price" size="50" maxlength="100"><br>
-				</p><br>
-				<INPUT type="submit" name="submit_add" value="Submit">
+					From Book Name: 
+					<INPUT type="text" name="from_name" size="50" maxlength="100">
+					TO:
+					<INPUT type="text" name="to_name" size="50" maxlength="100"> 
+					<INPUT type="submit" name="submit_edit" value="Submit">
+				</p>
 			</form>
-			<!-- ADD SERVICE -->
+			<!-- EDIT SERVICE -->
 		</div>
 	</body>
 </html>

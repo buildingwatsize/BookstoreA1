@@ -1,0 +1,12 @@
+Change Logs v1.01
+-----------------
+- Enhances System
+- New New Design and New GUI Template
+- Added Index Page
+- Remove some file not use
+- Change File Name
+	1. WebServiceClient.php -> search.php
+	2. WebServiceServer.php -> server_wsdl.php
+	3. WebServiceAdd.php -> add.php
+	4. WebServiceEdit.php -> edit.php
+	5. WebServiceDelete.php -> delete.php

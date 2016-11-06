@@ -2,7 +2,7 @@
 	<head>
 	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-		<title>Add New Book</title> 
+		<title>Delete Book</title> 
 
 		<!-- DO NOT TOUCH THIS SCRIPT -->		
 		<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -38,49 +38,30 @@
 		</div>
 	
 		<div class="content">
-			<!-- ADD SERVICE -->
-			<h1> Add New Book </h1>
+			<!-- DELETE SERVICE -->
+			<h1> Delete Book </h1>
+			<h2><font color="red">CAUTION ! IT WILL BE DELETE NODE IN XML FILE.</font></h2>
 			<?php
-				// FOR DISABLE ERROR INPUT NOTICE
+			  	// FOR DISABLE ERROR INPUT NOTICE
 				error_reporting( error_reporting() & ~E_NOTICE );
 				// FOR CALL NUSOAP
 				require("lib/nusoap.php");
 
-			  	if($_POST['submit_add'] == "Submit") {
+				if($_POST['submit_delete'] == "Submit") {
+					$mark_name=$_POST['mark_name'];
 			        $client = new nusoap_client("http://ec2-54-169-255-210.ap-southeast-1.compute.amazonaws.com/book/server_wsdl.php?wsdl",true);
-			        $add = array(
-						'titleVar'=>$_POST['from_title'],
-						'authorVar'=>$_POST['from_author'],
-						'publisherVar'=>$_POST['from_publisher'],
-						'publish_dateVar'=>$_POST['from_publish_date'],
-						'typeVar'=>$_POST['from_type'],
-						'languageVar'=>$_POST['from_language'],
-						'priceVar'=>$_POST['from_price']
-						);
-			        $data = $client->call("add_book",$add);		
+			        $params = array('mark_name'=>$mark_name);
+			        $data = $client->call("delete_book",$params); 
 			        echo $data;
 			    }
 			?>
-			<form method="POST">
-				<p>
-				title:
-				<INPUT type="text" name="from_title" size="50" maxlength="100"><br>
-				author:
-				<INPUT type="text" name="from_author" size="50" maxlength="100"><br>
-				publisher:
-				<INPUT type="text" name="from_publisher" size="50" maxlength="100"><br>
-				publish_date:
-				<INPUT type="text" name="from_publish_date" size="50" maxlength="100"><br>
-				type:
-				<INPUT type="text" name="from_type" size="50" maxlength="100"><br>
-				language:
-				<INPUT type="text" name="from_language" size="50" maxlength="100"><br>
-				price:
-				<INPUT type="text" name="from_price" size="50" maxlength="100"><br>
-				</p><br>
-				<INPUT type="submit" name="submit_add" value="Submit">
+			<form method="POST">	
+				<p>Delete Book Name: 
+				<INPUT type="text" name="mark_name" size="50" maxlength="100"></p>
+				<INPUT type="submit" name="submit_delete" value="Submit">
+				<br>
 			</form>
-			<!-- ADD SERVICE -->
+			<!-- DELETE SERVICE -->
 		</div>
 	</body>
 </html>
