@@ -13,7 +13,7 @@
 	</head>
 	<body>
 		<div id="header">
-			<div class="logo"><a href="#">CodeIS<span> WEB SERVICE </span><span style="font-size: 0.45em;">php</span></a></div>
+			<div class="logo"><a href="http://ec2-54-169-255-210.ap-southeast-1.compute.amazonaws.com/book/">CodeIS<span> WEB SERVICE </span><span style="font-size: 0.45em;">php</span></a></div>
 			<div class="powered">Template by <a href="http://www.mhwebdesigns.com" target="_blank">MHWebDesigns.com</a></div>
 	    </div>
 	
@@ -23,7 +23,7 @@
 			<div id="container">
 				<div class="sidebar">
 					<ul id="nav">
-						<li><a  href="#1"> HOME </a></li>
+						<li><a  href="http://ec2-54-169-255-210.ap-southeast-1.compute.amazonaws.com/book/"> HOME </a></li>
 						<li><a  href="BookStore.xml"> LIST BOOK </a></li>
 						<li><a  href="search.php"> SEARCH BOOK </a></li>	
 						<li><a  href="add.php"> ADD NEW BOOK</a></li>	
